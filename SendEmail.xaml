@@ -13,7 +13,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1625,1575</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1583,1443</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -83,7 +83,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SendEmail" sap:VirtualizedContainerService.HintSize="1635,1470" sap2010:WorkflowViewState.IdRef="Sequence_7">
+  <Sequence DisplayName="SendEmail" sap:VirtualizedContainerService.HintSize="1593,1378" sap2010:WorkflowViewState.IdRef="Sequence_7">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="SendEmail" Name="WorkflowName" />
       <Variable x:TypeArguments="x:Boolean" Default="True" Name="IsChildWorkflow" />
@@ -100,7 +100,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Initialize" sap:VirtualizedContainerService.HintSize="1593,143" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence DisplayName="Initialize" sap:VirtualizedContainerService.HintSize="1551,143" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -136,7 +136,7 @@
         </If.Else>
       </If>
     </Sequence>
-    <TryCatch DisplayName="TrySendEmail" sap:VirtualizedContainerService.HintSize="1593,972" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="TrySendEmail" sap:VirtualizedContainerService.HintSize="1551,880" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -144,14 +144,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="SendEmailSequence" sap:VirtualizedContainerService.HintSize="1555,745" sap2010:WorkflowViewState.IdRef="Sequence_15">
+        <Sequence DisplayName="SendEmailSequence" sap:VirtualizedContainerService.HintSize="1513,653" sap2010:WorkflowViewState.IdRef="Sequence_15">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If Condition="[IsSmptMail]" DisplayName="SMTP" sap:VirtualizedContainerService.HintSize="1513,553" sap2010:WorkflowViewState.IdRef="If_3">
+          <If Condition="[IsSmptMail]" DisplayName="SMTP" sap:VirtualizedContainerService.HintSize="1471,461" sap2010:WorkflowViewState.IdRef="If_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -159,29 +159,22 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="755,395" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <If Condition="[in_IsBodyHtml]" DisplayName="IsHtmlBodySMTP" sap:VirtualizedContainerService.HintSize="713,303" sap2010:WorkflowViewState.IdRef="If_5">
-                  <If.Then>
-                    <ui:SendMail From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" AttachmentsCollection="[in_Attachments]" Bcc="[in_BccRecipient]" Body="[in_Body]" Cc="[in_CcRecipient]" DisplayName="Send SMTP Mail Message" Email="[SmtpConfig(&quot;SmtpEmail&quot;).ToString]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_3" IsBodyHtml="True" Password="[SmtpConfig(&quot;SmtpPass&quot;).ToString]" Port="[Ctype(SmtpConfig(&quot;SmtpPort&quot;).ToString,int32)]" SecureConnection="Auto" Server="[SmtpConfig(&quot;SmtpServer&quot;).ToString]" Subject="[in_Subject]" To="[in_Recipient]">
-                      <ui:SendMail.Files>
-                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
-                      </ui:SendMail.Files>
-                    </ui:SendMail>
-                  </If.Then>
-                  <If.Else>
-                    <ui:SendMail From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" AttachmentsCollection="[in_Attachments]" Bcc="[in_BccRecipient]" Body="[in_Body]" Cc="[in_CcRecipient]" DisplayName="Send SMTP Mail Message" Email="[SmtpConfig(&quot;SmtpEmail&quot;).ToString]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Password="[SmtpConfig(&quot;SmtpPass&quot;).ToString]" Port="[Ctype(SmtpConfig(&quot;SmtpPort&quot;).ToString,int32)]" SecureConnection="Auto" Server="[SmtpConfig(&quot;SmtpServer&quot;).ToString]" Subject="[in_Subject]" To="[in_Recipient]">
-                      <ui:SendMail.Files>
-                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
-                      </ui:SendMail.Files>
-                    </ui:SendMail>
-                  </If.Else>
-                </If>
-              </Sequence>
+              <If Condition="[in_IsBodyHtml]" DisplayName="IsHtmlBodySMTP" sap:VirtualizedContainerService.HintSize="713,303" sap2010:WorkflowViewState.IdRef="If_5">
+                <If.Then>
+                  <ui:SendMail From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" AttachmentsCollection="[in_Attachments]" Bcc="[in_BccRecipient]" Body="[in_Body]" Cc="[in_CcRecipient]" DisplayName="Send SMTP Mail Message" Email="[SmtpConfig(&quot;SmtpEmail&quot;).ToString]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_3" IsBodyHtml="True" Password="[SmtpConfig(&quot;SmtpPass&quot;).ToString]" Port="[Ctype(SmtpConfig(&quot;SmtpPort&quot;).ToString,int32)]" SecureConnection="Auto" Server="[SmtpConfig(&quot;SmtpServer&quot;).ToString]" Subject="[in_Subject]" To="[in_Recipient]">
+                    <ui:SendMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
+                    </ui:SendMail.Files>
+                  </ui:SendMail>
+                </If.Then>
+                <If.Else>
+                  <ui:SendMail From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" AttachmentsCollection="[in_Attachments]" Bcc="[in_BccRecipient]" Body="[in_Body]" Cc="[in_CcRecipient]" DisplayName="Send SMTP Mail Message" Email="[SmtpConfig(&quot;SmtpEmail&quot;).ToString]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Password="[SmtpConfig(&quot;SmtpPass&quot;).ToString]" Port="[Ctype(SmtpConfig(&quot;SmtpPort&quot;).ToString,int32)]" SecureConnection="Auto" Server="[SmtpConfig(&quot;SmtpServer&quot;).ToString]" Subject="[in_Subject]" To="[in_Recipient]">
+                    <ui:SendMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
+                    </ui:SendMail.Files>
+                  </ui:SendMail>
+                </If.Else>
+              </If>
             </If.Then>
             <If.Else>
               <If Condition="[in_IsBodyHtml]" DisplayName="IsHtmlBody" sap:VirtualizedContainerService.HintSize="713,303" sap2010:WorkflowViewState.IdRef="If_4">
@@ -202,7 +195,7 @@
               </If>
             </If.Else>
           </If>
-          <Assign DisplayName="Success" sap:VirtualizedContainerService.HintSize="1513,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+          <Assign DisplayName="Success" sap:VirtualizedContainerService.HintSize="1471,60" sap2010:WorkflowViewState.IdRef="Assign_4">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Boolean">[out_IsEmailSent]</OutArgument>
             </Assign.To>
