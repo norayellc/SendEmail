@@ -1,0 +1,1 @@
+For SMTP activity the input dictionary must to contains all the value for  :"SmtpPort","SmtpServer""SmtpEmail","SmtpPass"
